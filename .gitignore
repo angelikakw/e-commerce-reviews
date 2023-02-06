@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# dataset
+Womens Clothing E-Commerce Reviews.csv
