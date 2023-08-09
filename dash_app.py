@@ -36,11 +36,11 @@ def show_dashboard(data):
     ])
 
     @app.callback(
-        Output("plot2", "figure"),
+        Output("plot3", "figure"),
         Input("names", "value"))
     def generate_chart(names):
-        fig = px.pie(data, values=data[data['Class Name'] == names]['Rating'].value_counts().values,
-                     names=data[data['Class Name'] == names]['Rating'].value_counts().index,
+        fig = px.pie(data, values=data[data['Class Name'] == str(names)]['Rating'].value_counts().values,
+                     names=data[data['Class Name'] == str(names)]['Rating'].value_counts().index,
                      title='Rating')
         return fig
 
